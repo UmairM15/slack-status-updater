@@ -10,7 +10,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SLACK_TOKEN = os.getenv("SLACK_USER_TOKEN")
-SLACK_TOKEN = os.getenv("SLACK_USER_TOKEN")
 if not SLACK_TOKEN:
     raise RuntimeError("Missing SLACK_USER_TOKEN environment variable.")
 API = "https://slack.com/api"
