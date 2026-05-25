@@ -32,7 +32,10 @@ jobs:
       - name: Show trigger info
         run: |
           echo "event_name=${{ github.event_name }}"
+          echo "UTC time:"
           date -u
+          echo "Toronto time:"
+          TZ=America/Toronto date
 
       - name: Run Slack status script
         run: python slack_status.py
