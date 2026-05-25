@@ -1,4 +1,4 @@
-timezone: America/New_York
+timezone: America/Toronto
 
 # The script will never overwrite these.
 protected_statuses:
