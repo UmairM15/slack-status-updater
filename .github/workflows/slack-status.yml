@@ -1,9 +1,6 @@
 name: Update Slack Status
 
 on:
-  schedule:
-    # Every 5 minutes, offset away from :00 to reduce GitHub scheduler delays
-    - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -36,6 +33,9 @@ jobs:
           date -u
           echo "Toronto time:"
           TZ=America/Toronto date
+
+      - name: Check Slack token exists
+        run: test -n "$SLACK_USER_TOKEN"
 
       - name: Run Slack status script
         run: python -u slack_status.py
