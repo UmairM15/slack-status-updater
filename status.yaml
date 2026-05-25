@@ -6,7 +6,8 @@ protected_statuses:
     emoji: ":zzz:"
   - text: Event
     emoji: ":circus_tent:"
-  - text: In a meeting
+  - text: In meeting
+  - emoji: ":spiral_calendar_pad:"
 
 # The script is allowed to overwrite only these statuses.
 managed_statuses:
@@ -24,15 +25,15 @@ managed_statuses:
 schedule:
   - status: lunch
     days: [mon, tue, wed, thu, fri]
-    start: "12:00"
-    end: "13:00"
+    start: "13:00"
+    end: "14:00"
 
   - status: office
     days: [mon, wed, fri]
     start: "09:00"
-    end: "17:00"
+    end: "18:00"
 
   - status: wfh
     days: [tue, thu]
     start: "09:00"
-    end: "17:00"
+    end: "18:00"
