@@ -29,5 +29,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Show trigger info
+        run: |
+          echo "event_name=${{ github.event_name }}"
+          date -u
+
       - name: Run Slack status script
         run: python slack_status.py
