@@ -38,4 +38,4 @@ jobs:
           TZ=America/Toronto date
 
       - name: Run Slack status script
-        run: python slack_status.py
+        run: python -u slack_status.py
