@@ -1,0 +1,29 @@
+name: Update Slack Status
+
+on:
+  schedule:
+    # Every 5 minutes, offset away from :00 to reduce GitHub scheduler delays
+    - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"
+  workflow_dispatch:
+
+jobs:
+  update-status:
+    runs-on: ubuntu-latest
+
+    env:
+      SLACK_USER_TOKEN: ${{ secrets.SLACK_USER_TOKEN }}
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Slack status script
+        run: python slack_status.py

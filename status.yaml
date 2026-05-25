@@ -11,11 +11,11 @@ protected_statuses:
 # The script is allowed to overwrite only these statuses.
 managed_statuses:
   office:
-    text: In office
+    text: ""
     emoji: ":office:"
   wfh:
     text: WFH
-    emoji: ":house_with_garden:"
+    emoji: ":house:"
   lunch:
     text: Lunch Break
     emoji: ":cookie:"
