@@ -1,0 +1,38 @@
+timezone: America/New_York
+
+# The script will never overwrite these.
+protected_statuses:
+  - text: Off shift
+    emoji: ":zzz:"
+  - text: Event
+    emoji: ":circus_tent:"
+  - text: In a meeting
+
+# The script is allowed to overwrite only these statuses.
+managed_statuses:
+  office:
+    text: In office
+    emoji: ":office:"
+  wfh:
+    text: WFH
+    emoji: ":house_with_garden:"
+  lunch:
+    text: Lunch Break
+    emoji: ":cookie:"
+
+# First matching rule wins, so lunch goes before WFH/office.
+schedule:
+  - status: lunch
+    days: [mon, tue, wed, thu, fri]
+    start: "12:00"
+    end: "13:00"
+
+  - status: office
+    days: [mon, wed, fri]
+    start: "09:00"
+    end: "17:00"
+
+  - status: wfh
+    days: [tue, thu]
+    start: "09:00"
+    end: "17:00"
