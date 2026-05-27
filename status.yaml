@@ -29,11 +29,11 @@ schedule:
     end: "14:00"
 
   - status: office
-    days: [mon, wed, fri]
+    days: [mon, thu]
     start: "09:00"
     end: "18:00"
 
   - status: wfh
-    days: [tue, thu]
+    days: [tue, wed, fri]
     start: "09:00"
     end: "18:00"
