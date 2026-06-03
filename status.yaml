@@ -22,7 +22,7 @@ managed_statuses:
     emoji: ":cookie:"
   off-shift:
     text: off shift
-    emoji: "sleeping"
+    emoji: ":dizzy-squirtle:"
 
 # First matching rule wins, so lunch goes before WFH/office.
 schedule:
