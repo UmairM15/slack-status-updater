@@ -20,6 +20,9 @@ managed_statuses:
   lunch:
     text: Lunch Break
     emoji: ":cookie:"
+  off-shift:
+    text: off shift
+    emoji: "dizzy-squirtle"
 
 # First matching rule wins, so lunch goes before WFH/office.
 schedule:
@@ -37,3 +40,8 @@ schedule:
     days: [tue, wed, fri]
     start: "09:00"
     end: "18:00"
+
+  - status: off-shift
+    days: [mon, tue, wed, fri, sat, sun]
+    start: "00:00"
+    end: "23:59"
