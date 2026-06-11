@@ -12,7 +12,7 @@ protected_statuses:
 # The script is allowed to overwrite only these statuses.
 managed_statuses:
   office:
-    text: ""
+    text: "@ Steeles"
     emoji: ":office:"
   wfh:
     text: WFH
